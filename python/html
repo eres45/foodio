@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Virtual Assistant</title>
+    <style>
+        /* Style the chat container */
+        #chat-container {
+            width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <h1>Virtual Assistant</h1>
+        <div id="chat-box" style="height: 300px; overflow-y: scroll; border: 1px solid #ccc; padding: 10px;"></div>
+        <input type="text" id="user-input" style="width: 100%; padding: 5px; margin-top: 10px;">
+        <button onclick="sendQuestion()">Ask</button>
+    </div>
+
+    <script>
+        function sendQuestion() {
+            const userInput = document.getElementById('user-input').value;
+            document.getElementById('chat-box').innerHTML += '<p><strong>User:</strong> ' + userInput + '</p>';
+            // Call a function to send the user input to the server
+            // Use AJAX or Fetch API to send this input to the backend
+            // Update the chat-box with the response from the server
+        }
+    </script>
+</body>
+</html>
